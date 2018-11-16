@@ -1,0 +1,120 @@
+<html>
+
+<head>
+
+<title>Student Registration Form</title>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stustyle2.css') }}"> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("form").submit(function(){
+        alert("Thank you for registering!");
+    });
+});
+</script>
+
+</head>
+ 
+<body>
+<h3>STUDENT REGISTRATION FORM</h3>
+    
+<form action = "/verify_student" method = "post">
+ 
+<table align="center" cellpadding = "10">
+    
+    
+ 
+<!------- Name ---------->
+<tr>
+<td>NAME</td>
+<td><input type="text" name="Name" maxlength="30" required />
+(max 30 characters A-Z)
+</td>
+</tr>
+ 
+<!------- USN ----------> 
+<tr>
+<td>USN</td>
+<td><input type="text" name="USN" maxlength="10" size="10" required/>
+</td>
+</tr>
+
+<!------- Branch ---------->
+<tr>
+<td>BRANCH</td>
+<td><select name="Branch" required>
+  <option value="CSE">Computer Science</option>
+  <option value="ISE">Information Science</option>
+  <option value="CIVIL">Civil</option>
+  <option value="IP">Industrial Production</option>
+  <option value="EEE">Electrical and Electronics</option>
+  <option value="ECE">Electronics and Communication</option>
+  <option value="MECH">Mechanical</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>SEMESTER</td>
+<td><select name="sem" required>
+  <option value="1">I</option>
+  <option value="2">II</option>
+  <option value="3">III</option>
+  <option value="4">IV</option>
+  <option value="5">V</option>
+  <option value="6">VI</option>
+  <option value="7">VII</option>
+  <option value="8">VIII</option>
+</select>
+</td>
+</tr>
+ 
+
+<tr>
+<td>SECTION</td>
+<td><input type="text" name="section" required />
+</td>
+</tr>
+  
+<tr>
+<td>EMAIL ID</td>
+<td><input type="email" name="Email_Id" maxlength="100" required /></td>
+</tr>
+ 
+<tr>
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" size="10" required />
+(10 digit number)
+</td>
+</tr>
+  
+<tr>
+<td>PASSWORD</td>
+<td>
+ <input type="password" placeholder="Password" id="password"
+ name="passwd" required>
+</td>
+</tr> 
+ 
+
+ 
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+  
+ 
+  
+</table>
+ 
+
+ </form>
+</body>
+</html>
