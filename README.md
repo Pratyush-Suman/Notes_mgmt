@@ -1,1 +1,1 @@
-# Notes_mgmt
+# Notes_mgmt DBMS
