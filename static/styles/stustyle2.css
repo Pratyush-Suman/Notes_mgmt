@@ -1,0 +1,25 @@
+body{
+   background: url(https://images.unsplash.com/photo-1492052722242-2554d0e99e3a?ixlib=rb-0.3.5&s=4e19fa6e8e1340753ae56cbb8f3dae0d&auto=format&fit=crop&w=1567&q=80) no-repeat center center; 
+}
+
+h3{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:#905302;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:#905302; 
+  font-size: 18pt; 
+  font-style: Arvo;
+  font-weight: bold;
+  text-align:; 
+  background-color:; 
+  border-collapse: collapse; 
+  /*border: 2px solid #706558*/
+}

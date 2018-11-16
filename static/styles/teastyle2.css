@@ -1,0 +1,28 @@
+body{
+    
+    
+   background: url("teacher.jpg") no-repeat center center; 
+
+}
+
+h3{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:#905302;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:#905302; 
+  font-size: 18pt; 
+  font-style: Arvo;
+  font-weight: bold;
+  text-align:; 
+  background-color:transparent; 
+  /*border-collapse: collapse; 
+  border: 2px;*/
+}
