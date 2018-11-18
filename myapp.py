@@ -23,31 +23,39 @@ def login_page():
 
 @app.route("/verify_student", methods = ['POST'])
 def verify_student_info():
-	name = request.form['Name']
-	usn = request.form['USN']
-	branch = request.form['Branch']
+	Name = request.form['Name']
+	USN = request.form['USN']
+	Branch = request.form['Branch']
 	sem = request.form['sem']
-	sec = request.form['section']
-	email = request.form['Email_Id']
-	mobile = request.form['Mobile_Number']
-	pwrd = request.form['passwd']
+	section = request.form['section']
+	Email_Id = request.form['Email_Id']
+	Mobile_Number = request.form['Mobile_Number']
+	passwd = request.form['passwd']
 
-	insert_student_details(name,usn,branch,sem,sec,mobile,email,pwrd) 
+	flag = insert_student_details(Name,USN,Branch,sem,section,Mobile_Number,Email_Id,passwd) 
 
-	return render_template('first.html')
+	if flag == 0:
+		return render_template('student2.html', message = 'USN IS ALREADY REGISTERED!!')
+
+	elif flag == 1:
+		return render_template('first.html')
 
 @app.route("/verify_teacher", methods = ['POST'])
 def verify_teacher_info():
-	tname = request.form['TName']
-	tid = request.form['TId']
+	Tname = request.form['TName']
+	ID_no = request.form['ID_no']
 	dept = request.form['dept']
-	temail = request.form['TEmail_Id']
-	tmobile = request.form['TMobile_Number']
+	TEmail_Id = request.form['TEmail_Id']
+	TMobile_Number = request.form['TMobile_Number']
 	tpwd = request.form['tpwd']
 
-	insert_teacher_details(tname,tid,dept,tmobile,temail,tpwd)
+	flag = insert_teacher_details(Tname,ID_no,dept,TMobile_Number,TEmail_Id,tpwd)
 
-	return render_template('first.html')
+	if flag == 0:
+		return render_template('teacher2.html', message = 'ID_no IS ALREADY REGISTERED!!')
+
+	elif flag == 1:
+		return render_template('first.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
