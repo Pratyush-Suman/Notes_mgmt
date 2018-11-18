@@ -4,21 +4,23 @@
 
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/teastyle2.css') }}"> 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--script>
 $(document).ready(function(){
     $("form").submit(function(){
-        alert("Thank for registering!");
+        alert("Thank you for registering!");
     });
 });
-</script>
+</script-->
+
 </head>
  
 <body>
 <h3>TEACHER REGISTRATION FORM</h3>
 
  <form action = "/verify_teacher" method = "post">
-  
+
 <table align="center" cellpadding = "10">
  
 <tr>
@@ -30,7 +32,7 @@ $(document).ready(function(){
  
 <tr>
 <td>ID</td>
-<td><input type="text" name="TId" maxlength="10" size="10" required/>
+<td><input type="text" name="ID_no" maxlength="10" size="10" required/>
 </td>
 </tr>
  
@@ -60,7 +62,6 @@ $(document).ready(function(){
 <td>MOBILE NUMBER</td>
 <td>
 <input type="text" name="TMobile_Number" maxlength="10" size="10" required/>
-(10 digit number)
 </td>
 </tr>
   
@@ -70,6 +71,14 @@ $(document).ready(function(){
  <input type="password" name="tpwd" placeholder="Password" id="password" required>
 </td>
 </tr>
+
+{% if message %}
+<small style = "color:black; margin-left:60px ">{{message}}</small>
+<br><br><br>
+{% else %}
+<br><br><br>
+{% endif %}
+
   
 <!----- Submit and Reset ------------------------------------------------->
 <tr>

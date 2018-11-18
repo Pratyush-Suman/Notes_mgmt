@@ -8,13 +8,13 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script>
+<!--script>
 $(document).ready(function(){
     $("form").submit(function(){
         alert("Thank you for registering!");
     });
 });
-</script>
+</script--  >
 
 </head>
  
@@ -88,7 +88,6 @@ $(document).ready(function(){
 <td>MOBILE NUMBER</td>
 <td>
 <input type="text" name="Mobile_Number" maxlength="10" size="10" required />
-(10 digit number)
 </td>
 </tr>
   
@@ -100,6 +99,12 @@ $(document).ready(function(){
 </td>
 </tr> 
  
+{% if message %}
+<small style = "color:black; margin-left:60px ">{{message}}</small>
+<br><br><br>
+{% else %}
+<br><br><br>
+{% endif %}
 
  
 <!----- Submit and Reset ------------------------------------------------->
