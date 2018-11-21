@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  <style>
+  body {
+      position: relative; 
+       background:url("https://images.unsplash.com/photo-1510511498717-4326639c999c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a484f5953d02134541096012dcabaf5&auto=format&fit=crop&w=750&q=80");
+       background-size: cover;
+  }
+  
+  #section42 {
+      padding-top:50px;
+      height:800px;
+      color: black; 
+      font-family:cursive;
+      }
+  
+      textarea{
+          color: black;
+          
+      }
+      #fname{
+          color:black;
+          padding: 5px;
+          margin-left: 7px;
+      }
+      
+      #noteText{
+          margin-top: 20px;
+          
+      }
+      
+      .button {
+    background-color: #577ab2; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+       table
+{
+    border-collapse: collapse;
+}
+      
+      
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section0">HOME</a></li>
+          
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PROFILE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section11">VIEW</a></li>
+              <li><a href="#section12">UPDATE</a></li>
+                
+            </ul>
+          </li>
+            
+          
+          
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">UPLOADED NOTES<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section42">UPLOAD NOTES</a></li>
+              <li><a href="#section41">VIEW NOTES</a></li>
+                
+            </ul>
+          </li>
+            
+         <li><a href="#section5">LOGOUT</a></li>
+            
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+
+        
+<div id="section42" class="container-fluid">
+    <h1 style="text-align: center;text-shadow: 2px 2px;font-size: 50px;">Make Notes</h1>
+    
+    <form>
+        
+        <div id="subject" class="floatL" style="padding-left: 30px">
+     <label for="fname"><h3>Subject:</h3></label>
+    <input type="text" id="fname" name="title" placeholder="Subject name?">
+        </div>
+        
+    <div id="title" class="floatL">
+     <label for="fname"><h3>Note Title:</h3></label>
+    <input type="text" id="fname" name="title" placeholder="Title of your note..">
+        </div>
+    
+  <div id="noteBody" class="clear" style="padding-bottom: 30px">  
+ <label for="noteText"><h3>Note Area: </h3></label>
+ <textarea id="noteText" rows="6" cols="80" name="subject" placeholder="Start making notes..." style="vertical-align: middle"></textarea>
+    </div>
+
+    
+    <table>
+<tr>
+<td style="font-size: 21px;padding-right: 10px;">BRANCH</td>
+<td style="padding-bottom: 20px;"><select name="Branch" required style="padding: 8px">
+  <option value="CSE">Computer Science</option>
+  <option value="ISE">Information Science</option>
+  <option value="CIVIL">Civil</option>
+  <option value="IP">Industrial Production</option>
+  <option value="EEE">Electrical and Electronics</option>
+  <option value="ECE">Electronics and Communication</option>
+  <option value="MECH">Mechanical</option>
+</select>
+</td>
+</tr>
+        
+<tr>
+<td style="font-size: 21px;padding-right: 10px;">SEMESTER</td>
+<td style="padding-bottom: 20px;"><select name="sem" required style="padding: 8px">
+  <option value="1">I</option>
+  <option value="2">II</option>
+  <option value="3">III</option>
+  <option value="4">IV</option>
+  <option value="5">V</option>
+  <option value="6">VI</option>
+  <option value="7">VII</option>
+  <option value="8">VIII</option>
+</select>
+</td>
+</tr>
+        
+<tr>
+<td style="font-size: 21px;padding-right: 10px;">SECTION: </td>
+<td style="padding-bottom: 20px;"><select style="padding: 8px">
+  <option value="first">A</option>
+  <option value="second">B</option>
+</select>
+</td>
+</tr>
+    </table>   
+         <div style="text-align: center"><button class="button">Add</button></div>
+    </form>
+</div>
+    
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+</body>
+</html>
