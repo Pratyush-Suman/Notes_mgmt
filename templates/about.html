@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  <style>
+body
+{
+    
+    background: url(https://images.unsplash.com/photo-1527608765267-05dbb2138342?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9c9090c0b4999cf0835b0e19339b989d&auto=format&fit=crop&w=750&q=80) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arvo,serif;
+}
+
+/*Jumbotron Styling*/
+
+.jumbotron{
+    background-color: transparent;
+    letter-spacing: 2.5px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+      
+      </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section0">HOME</a></li>
+            
+           <li><a href="#section5">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+
+    
+<div class="jumbotron" id="myContainer">
+      <h2 style="font-weight: bold;color:#02245b;">ABOUT</h2>
+    <p style="color: black">With our notes website never be afraid to lose any of your precious notes, to-do lists or any imporant information. Create your own notes which can help you to prioritize your work and also quickly access them anytime,anywhere! </p>
+    
+    <p style="color: black"> This website is also a one stop destination to access all the class materials or any information you might have missed in class sent by your professors. Never be short of lecture materials with our notes website.</p>
+
+    <p style="color: black">Happy learning!!</p>
+    
+    <h2 style="font-weight: bold;color:#02245b; padding-top:30px">ABOUT US</h2>
+    
+    <p style="color: black">A website made by two computer science students to the students for easy access to notes.Based in the National Institute of Engineering, this idea was born because we totally understand the pain of brushing through multiple resources to learn one topic.</p>
+    
+    <p style="color: black">We've been there, done that and now we are presenting to all of you our creation to make your college lives and exam days simpler.</p>
+       </div>
+    
+
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+</body>
+</html>
