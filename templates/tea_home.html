@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  <style>
+  body {
+      position: relative; 
+       background:url("https://images.unsplash.com/photo-1510511498717-4326639c999c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a484f5953d02134541096012dcabaf5&auto=format&fit=crop&w=750&q=80");
+      background-size: cover;
+  }
+  #section0 {
+       padding-top:50px;
+      height:800px;
+      color: black; 
+      font-family:cursive;
+      }
+      
+      </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">NoteIt</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            
+          <li><a href="tea_home.html">HOME</a></li>
+            
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PROFILE<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="tea_profile.html">VIEW</a></li>
+              <li><a href="tea_pro_upd.html">UPDATE</a></li>
+                
+            </ul>
+          </li>
+            
+          
+          
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">UPLOADED NOTES<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="tea_upl_note.html">UPLOAD NOTES</a></li>
+              <li><a href="tea_notes_list.html">VIEW NOTES</a></li>
+                
+            </ul>
+          </li>
+            
+         <li><a href="first.html">LOGOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+<div id="section0" class="container-fluid">
+    <h1 style="text-align: center">WELCOME !!</h1>
+    <small style = "color:black;text-align:center; padding-left: 580px;font-size: 20px; position: relative;top: -5px;">{{Name}}</small>
+    <h3 style="text-align: center">At home, in the college...one place to store your notes,thoughts and ideas. Also don't forget to check out all your class notes, they are your life boats during your exams!</h3>
+    <p>i'll put some nice images don't make a poker face reading the text</p>
+    <h2 style="text-align: center">GOOD LUCK!</h2>-
+    
+</div>    
+    
+
+   
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+</body>
+</html>
