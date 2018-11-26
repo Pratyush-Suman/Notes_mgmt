@@ -1,28 +1,26 @@
 body{
+  background: url(https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f69c53990c8beebe8351f97d3c27da61&auto=format&fit=crop&w=750&q=80) no-repeat center center; 
     
-    
-   background: url("teacher.jpg") no-repeat center center; 
-
+    background-size: cover;
 }
 
 h3{
-  font-family: Calibri; 
-  font-size: 25pt;         
-  font-style: normal; 
-  font-weight: bold; 
-  color:#905302;
-  text-align: center; 
-  text-decoration: underline
+    color: #02245b; 
+    font-family: 'Bitter', serif; 
+    font-size: 40px; 
+    font-weight:bold;
+    line-height: 54px; 
+    margin: 0 0 54px; 
+    text-align: center;
+    text-shadow: 2px 2px 8px #1b5bc4;
 }
 
 table{
-  font-family: Calibri; 
-  color:#905302; 
+  font-family: cursive; 
+  color:#02245b; 
   font-size: 18pt; 
   font-style: Arvo;
   font-weight: bold;
-  text-align:; 
-  background-color:transparent; 
-  /*border-collapse: collapse; 
-  border: 2px;*/
+  background-color:; 
+  border-collapse: collapse; 
 }
