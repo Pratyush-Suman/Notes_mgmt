@@ -17,10 +17,22 @@
 			<div>Online<span>Notes</span></div>
 		</div>
 		<br>
+
 		<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
+			<form action="/verify_login" method="POST">
+				<input type="text" placeholder="username" name="username"><br>
 				<input type="password" placeholder="password" name="password"><br>
-				<input type="button" value="Login">
+				<button type="submit">Login</button>
+
+
+				{% if message %}
+		 		 <small style = "color:black;font-size: 20px;font-weight: bold">{{message}}</small>
+		 		{% else %}
+		 		 <br><br><br>
+				{% endif %}
+
+				
+			</form>
 		</div>
 
     </body>

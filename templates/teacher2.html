@@ -6,13 +6,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!--script>
-$(document).ready(function(){
-    $("form").submit(function(){
-        alert("Thank you for registering!");
-    });
-});
-</script-->
 
 </head>
  
@@ -25,21 +18,21 @@ $(document).ready(function(){
  
 <tr>
 <td>NAME</td>
-<td><input type="text" name="TName" maxlength="30" required />
+<td><input type="text" name="TName" maxlength="30" required style="padding: 10px;" />
 (max 30 characters A-Z)
 </td>
 </tr>
  
 <tr>
 <td>ID</td>
-<td><input type="text" name="ID_no" maxlength="10" size="10" required/>
+<td><input type="text" name="ID_no" maxlength="10" size="11" required style="padding: 10px;"/>
 </td>
 </tr>
  
 
 <tr>
 <td>DEPARTMENT</td>
-<td><select name="dept">
+<td><select name="dept" style="padding: 10px;">
   <option value="CSE">Computer Science</option>
   <option value="ISE">Information Science</option>
   <option value="CIVIL">Civil</option>
@@ -54,27 +47,27 @@ $(document).ready(function(){
 
 <tr>
 <td>EMAIL ID</td>
-<td><input type="text" name="TEmail_Id" maxlength="100" required/></td>
+<td><input type="EMAIL" name="TEmail_Id" maxlength="100" required style="padding: 10px;"/></td>
 </tr>
  
 
 <tr>
 <td>MOBILE NUMBER</td>
 <td>
-<input type="text" name="TMobile_Number" maxlength="10" size="10" required/>
+<input type="text" name="TMobile_Number" maxlength="10" size="10" required style="padding: 10px;"/>
 </td>
 </tr>
   
    <tr>
 <td>PASSWORD</td>
 <td>
- <input type="password" name="tpwd" placeholder="Password" id="password" required>
+ <input type="password" name="tpwd" placeholder="Password" id="password" required style="padding: 10px;">
 </td>
 </tr>
 
+
 {% if message %}
-<small style = "color:black; margin-left:60px ">{{message}}</small>
-<br><br><br>
+<small style = "color:black;font-size: 20px;font-weight: bold">{{message}}</small>
 {% else %}
 <br><br><br>
 {% endif %}
@@ -82,9 +75,9 @@ $(document).ready(function(){
   
 <!----- Submit and Reset ------------------------------------------------->
 <tr>
-<td colspan="2" align="center">
-<input type="submit" value="Submit">
-<input type="reset" value="Reset">
+<td colspan="2" align="center" style="padding-right: 160px">
+<input type="submit" value="Submit" style="padding: 15px 30px;background-color: #709be0;color: #02245b;font-size: 17px;font-weight: bold;border-color: #114291;">
+<input type="reset" value="Reset" style="padding: 15px 30px;background-color: #709be0;color: #02245b;font-size: 17px;font-weight: bold;border-color: #114291;">
 </td>
 </tr>
   
