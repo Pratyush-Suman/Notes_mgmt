@@ -95,7 +95,7 @@ body{
 	margin-top: 10px;
 }
 
-.login input[type=button]{
+.loginButton{
 	width: 260px;
 	height: 35px;
 	background: #fff;
